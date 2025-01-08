@@ -39,11 +39,22 @@ export default function RootLayout() {
           options={{
             headerShown: false,
             title: "Go Back",
+            headerTransparent: true,
           }}
         />
         <Stack.Screen name="+not-found" />
-        <Stack.Screen options={{ headerShown: false }} name="menu" />
-        <Stack.Screen options={{ headerShown: false }} name="detail" />
+        <Stack.Screen
+          options={{ headerShown: true, headerTransparent: true }}
+          name="menu"
+        />
+        <Stack.Screen
+          options={{
+            headerShown: true,
+            headerTransparent: true,
+            title: "Go back",
+          }}
+          name="detail"
+        />
       </Stack>
       <StatusBar style="auto" />
     </ThemeProvider>
